@@ -13,5 +13,5 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Doxygen for protos
+      - name: Doxygen Action
         uses: pseudomuto/protoc-gen-doc
