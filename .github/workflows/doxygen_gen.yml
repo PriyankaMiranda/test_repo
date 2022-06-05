@@ -6,11 +6,9 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Doxygen for protos
-        run: |
-                echo "Test"
-                echo "Test2"
       - uses: actions/checkout@v2
+      - name: Doxygen for protos
+        uses: pseudomuto/protoc-gen-doc
       - name: Doxygen Action
         uses: mattnotmitt/doxygen-action@v1.1.0
         with:
