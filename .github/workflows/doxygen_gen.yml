@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Doxygen for protos
-        uses: pseudomuto/protoc-gen-doc
+        run : pip install proto2cpp 
       - name: Doxygen Action
         uses: mattnotmitt/doxygen-action@v1.1.0
         with:
