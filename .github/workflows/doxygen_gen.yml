@@ -13,5 +13,5 @@ jobs:
         run: sudo apt-get install doxygen -y
         shell: bash
       - name: Doxygen Action
-        run : doxygen -g Doxyfile . true
+        run : doxygen Doxyfile . true
         shell: bash
