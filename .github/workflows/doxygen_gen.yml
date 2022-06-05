@@ -1,6 +1,6 @@
 name: Doxygen Action
 
-on: [pull_request]
+on: [push]
 #on: 
 #  push:
 #    branches:
@@ -13,5 +13,6 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Doxygen Action
-        uses: pseudomuto/protoc-gen-doc
+        - uses : action/checkout@v2
+        - name : actions for protobuff
+          uses : pseudomuto/protoc-gen-doc
