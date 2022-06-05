@@ -1,0 +1,20 @@
+name: Doxygen Action
+
+on: [pull_request]
+#on: 
+#  push:
+#    branches:
+#      - doxygen-updates
+#  workflow_run:
+#    workflows: ["Release"]
+#    types: [completed]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Doxygen for protos
+        uses: pseudomuto/protoc-gen-doc 
+        with:
+          doc_out: ./docs/html
+          doc_opt: html,index.html proto/*.proto
