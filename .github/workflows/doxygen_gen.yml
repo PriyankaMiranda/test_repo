@@ -14,7 +14,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Doxygen for protos
-        uses: github.com/pseudomuto/protoc-gen-doc/cmd/protoc-gen-doc
-        with:
-          doc_out: ./docs/html
-          doc_opt: html,index.html proto/*.proto
+        uses: pseudomuto/protoc-gen-doc/cmd/protoc-gen-doc
