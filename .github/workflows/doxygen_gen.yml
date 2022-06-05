@@ -7,5 +7,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+            submodules: "true"
+      - name: Install Doxygen
+        run: sudo apt-get install doxygen -y
+        shell: bash
       - name: Doxygen Action
         run : doxygen -g Doxyfile
+        shell: bash
