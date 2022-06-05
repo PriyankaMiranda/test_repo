@@ -1,12 +1,17 @@
 name: Doxygen Action
+
 on: [push]
+
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-        - uses : actions/checkout@v2
-        - name : actions for protobuff
-          uses : pseudomuto/protoc-gen-doc
-          with:
-            doc_out : ./docs/html
-            doc_opt : html,index.html proto/*.proto
+      - name: Doxygen for protos
+        run: |
+                echo "Test"
+                echo "Test2"
+      - uses: actions/checkout@v2
+      - name: Doxygen Action
+        uses: mattnotmitt/doxygen-action@v1.1.0
+        with:
+          doxyfile-path: ./Doxyfile
