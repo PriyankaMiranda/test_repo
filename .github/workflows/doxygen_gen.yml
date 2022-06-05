@@ -1,19 +1,10 @@
 name: Doxygen Action
-
 on: [push]
-#on: 
-#  push:
-#    branches:
-#      - doxygen-updates
-#  workflow_run:
-#    workflows: ["Release"]
-#    types: [completed]
-
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-        - uses : action/checkout@v2
+        - uses : actions/checkout@v2
         - name : actions for protobuff
           uses : pseudomuto/protoc-gen-doc
           with:
