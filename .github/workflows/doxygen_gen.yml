@@ -10,7 +10,7 @@ jobs:
       - name: Install Doxygen
         run: sudo apt-get install doxygen -y
         shell: bash
-      - name: Doxygen Action
+      - name: Doxygen for Protobuf Action
         run : doxygen Doxyfile . true
         shell: bash
       - name: GH Pages Deployment
