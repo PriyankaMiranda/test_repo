@@ -11,7 +11,7 @@ jobs:
         run: sudo apt-get install doxygen -y
         shell: bash
       - name: Doxygen for Protobuf Action
-        run : doxygen Doxyfile . true
+        run : doxygen Doxyfile 
         shell: bash
       - name: GH Pages Deployment
         uses: peaceiris/actions-gh-pages@v3
@@ -21,4 +21,4 @@ jobs:
           enable_jekyll: false
           allow_empty_commit: false
           force_orphan: true
-          publish_branch: temp-testing-branch
+          publish_branch: gh-pages
