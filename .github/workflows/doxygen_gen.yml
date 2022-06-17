@@ -12,7 +12,7 @@ jobs:
           token: '${{ secrets.GITHUB_PAT }}'
           repository: PriyankaMiranda/test_repo
           path: ./cpp-protobuf-example
-        ref: 'master'
+          ref: 'master'
       - uses: actions/checkout@v2
       - name: Install Doxygen
         run: sudo apt-get install doxygen -y
