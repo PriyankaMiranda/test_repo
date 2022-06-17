@@ -2,11 +2,12 @@ name: Doxygen Action
 
 on: [push]
 
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+
 jobs:
   test:
     runs-on: ubuntu-latest
-    variables:
-      GIT_SUBMODULE_STRATEGY: recursive
     steps:
       - name: List docs dir
         run: ls
