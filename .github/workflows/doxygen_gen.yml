@@ -3,12 +3,13 @@ name: Doxygen Action
 on: [push]
 env:
   GIT_SUBMODULE_STRATEGY: recursive
+  GIT_SUBMODULE_UPDATE_FLAGS: --jobs 4
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
       - name: List docs dir
-        run: ls
+        run: git submodule update --init
         shell: bash
       - uses: actions/checkout@v2
       - name: Install Doxygen
