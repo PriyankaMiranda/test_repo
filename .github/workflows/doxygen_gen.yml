@@ -1,10 +1,9 @@
 name: Doxygen Action
 
 on: [push]
-
+env:
+  GIT_SUBMODULE_STRATEGY: recursive
 jobs:
-  variables:
-    GIT_SUBMODULE_STRATEGY: recursive
   test:
     runs-on: ubuntu-latest
     steps:
