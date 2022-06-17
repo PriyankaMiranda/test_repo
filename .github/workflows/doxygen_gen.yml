@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: List docs dir
-        run: ls -ls .
+        run: ls
         shell: bash
       - uses: actions/checkout@v2
       - name: Install Doxygen
