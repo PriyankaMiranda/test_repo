@@ -1,9 +1,7 @@
 name: Doxygen Action
 
 on: [push]
-env:
-  GIT_SUBMODULE_STRATEGY: recursive
-  GIT_SUBMODULE_UPDATE_FLAGS: --remote --merge
+
 jobs:
   test:
     runs-on: ubuntu-latest
