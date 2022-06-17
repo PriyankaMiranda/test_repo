@@ -13,9 +13,6 @@ jobs:
       - name: Doxygen for Protobuf Action
         run : doxygen Doxyfile 
         shell: bash
-      - name: Doxygen for Protobuf Action
-        run : doxygen Doxyfile2 
-        shell: bash
       - name: GH Pages Deployment
         uses: peaceiris/actions-gh-pages@v3
         with:
