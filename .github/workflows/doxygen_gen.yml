@@ -11,7 +11,7 @@ jobs:
         with:
           token: '${{ secrets.GITHUB_PAT }}'
           repository: PriyankaMiranda/test_repo
-          path: ./cpp-protobuf-example
+          path: ./submodule_repo
           ref: 'master'
       - uses: actions/checkout@v2
       - name: Install Doxygen
