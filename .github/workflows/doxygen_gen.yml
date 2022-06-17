@@ -8,9 +8,6 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: List docs dir
-        run: git submodule update --init
-        shell: bash
       - uses: actions/checkout@v2
       - name: Install Doxygen
         run: sudo apt-get install doxygen -y
