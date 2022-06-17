@@ -6,12 +6,12 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout submodule
-      uses: actions/checkout@v2.0.0
-      with:
-        token: '${{ secrets.GITHUB_PAT }}'
-        repository: PriyankaMiranda/test_repo
-        path: ./cpp-protobuf-example
+      - name: Checkout submodule
+        uses: actions/checkout@v2.0.0
+        with:
+          token: '${{ secrets.GITHUB_PAT }}'
+          repository: PriyankaMiranda/test_repo
+          path: ./cpp-protobuf-example
         ref: 'master'
       - uses: actions/checkout@v2
       - name: Install Doxygen
