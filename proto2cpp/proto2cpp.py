@@ -15,7 +15,7 @@
 #   4. In the Doxygen configuration file, find EXTENSION_MAPPING and add proto=C
 #        EXTENSION_MAPPING      = proto=C
 #   5. In the Doxygen configuration file, find INPUT_FILTER and add this script
-#        INPUT_FILTER           = "python ./proto2cpp/proto2cpp.py"
+#        INPUT_FILTER           = "python proto2cpp.py"
 #   6. Run Doxygen with the modified configuration
 #        doxygen doxyfile
 #
