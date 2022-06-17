@@ -6,13 +6,11 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout submodule
-        uses: actions/checkout@v2.0.0
+      - uses: actions/checkout@v2
         with:
-          token: '${{ secrets.GITHUB_PAT }}'
-          repository: PriyankaMiranda/test_repo
-          path: ./submodule_repo
-          ref: 'master'
+          lfs: true
+          submodules: recursive
+          token: ${{ secrets.SUBMODULE_PAT }}
       - uses: actions/checkout@v2
       - name: Install Doxygen
         run: sudo apt-get install doxygen -y
