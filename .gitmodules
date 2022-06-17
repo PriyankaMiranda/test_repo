@@ -1,0 +1,3 @@
+[submodule "cpp-protobuf-example"]
+	path = cpp-protobuf-example
+	url = https://github.com/afiskon/cpp-protobuf-example.git
