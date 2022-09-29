@@ -19,7 +19,6 @@ jobs:
         shell: bash
       - name: PowerShell@2
         run:
-            targetType: 'inline'
             script: |
              $xml = [Xml] (Get-Content .\MyApp\MyApp.csproj)
              $version = $xml.Project.PropertyGroup.Version
