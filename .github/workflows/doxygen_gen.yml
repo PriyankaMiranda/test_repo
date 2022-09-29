@@ -18,7 +18,8 @@ jobs:
         run : doxygen Doxyfile 
         shell: bash
       - name: Get version 
-        run : exiftool test.csproj | grep -i Version
+        run : $xml = [Xml] (Get-Content ./test.csproj)
+              $version = [Version] $xml.Project.PropertyGroup.Version
         shell: bash
       - name: GH Pages Deployment
         uses: peaceiris/actions-gh-pages@v3
