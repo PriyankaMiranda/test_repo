@@ -21,7 +21,7 @@ jobs:
         uses: kzrnm/get-net-sdk-project-versions-action@v1
         id: get-version
         with:
-           proj-path: YourProject/YourProject.csproj
+           proj-path: ./test.csproj
       - run: echo "${{steps.get-version.outputs.version}}"
       - name: GH Pages Deployment
         uses: peaceiris/actions-gh-pages@v3
