@@ -17,13 +17,12 @@ jobs:
       - name: Doxygen for Protobuf Action
         run : doxygen Doxyfile 
         shell: bash
-      - name: PowerShell@2
-        run:
-            script: |
-             $xml = [Xml] (Get-Content .\MyApp\MyApp.csproj)
-             $version = $xml.Project.PropertyGroup.Version
-             echo $version
-             echo "##vso[task.setvariable variable=version]$version"
+      - name: Test
+        uses: kzrnm/get-net-sdk-project-versions-action@v1
+        id: get-version
+        with:
+           proj-path: YourProject/YourProject.csproj
+      - run: echo "${{steps.get-version.outputs.version}}"
       - name: GH Pages Deployment
         uses: peaceiris/actions-gh-pages@v3
         with:
