@@ -22,7 +22,7 @@ jobs:
         id: get-version
         with:
            proj-path: ./test.csproj
-      - run: echo "${{steps.get-version.outputs.version}}"
+      - run: echo "Version number -${{steps.get-version.outputs.version}}"
       - name : Add version to Doxyfile 
         run : ( cat Doxyfile ; echo "PROJECT_NUMBER=${{steps.get-version.outputs.version}}" ) | doxygen -
         shell : bash
